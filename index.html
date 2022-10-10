@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Smartphone Webshop</title>
   </head>
   <body>
@@ -55,20 +56,36 @@
         </tr>
       </table>
     </div>
-    <div>
+    <div class="message">
         <label for="message">Write your kind message here:</label>
+        <br>
          <input type="text" id="message" name="message"><br><br>
             
           </form>
     </div>
     <div>
       <footer>
-        <p>
+        <div id="address">
           Address: 6768 Please Don't Come After Me street, Neverland, Imaginary
           city
-        </p>
-        <p>Panni's Phones Smartphone Shop</p>
+        </div>
+        <div>Panni's Phones Smartphone Shop</div>
       </footer>
     </div>
+    <script>
+       function changeText() {
+        document.querySelector('h1').innerText = "Not a scam!"
+       }
+       function changeBg() {
+        document.querySelector('body').style.backgroundColor = 'grey'
+       }
+       function changeFooter() {
+        document.querySelector('#address').innerHTML = "Even faker one"
+       }
+       function addClass() {
+        document.querySelectorAll('a').classList.add('random-thing')
+       }
+
+    </script>
   </body>
 </html>
